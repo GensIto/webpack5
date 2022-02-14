@@ -1,0 +1,34 @@
+/* ****************************************************************************************************
+
+  # layered-image
+  - foundation > mixin
+  - スクロールして見えたらレイヤーが横にスッとずれる効果がある画像
+
+**************************************************************************************************** */
+
+@mixin layered-image($width: 100%, $color: $color-white) {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: $width;
+  height: auto;
+  // ▼スクロールのレイヤー
+  &::before {
+    display: block;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color;
+    transition: transform .8s .2s cubic-bezier(0.48, 0.18, 0, 0.98);
+    content: "";
+  }
+  &.is-inview {
+    // ▼スクロールのレイヤー
+    &::before {
+      transform: translateX(100%);
+    }
+  }
+}

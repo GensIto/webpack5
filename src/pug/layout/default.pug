@@ -1,0 +1,14 @@
+block variables
+doctype html
+html(lang=ja)
+  head
+    include ../component/_meta
+    include ../component/_libs
+  body.l-body
+    block header
+        include ../component/_header
+    main
+      block content
+    block footer
+      include ../component/_footer
+      include ../component/_script

@@ -1,0 +1,21 @@
+/* ****************************************************************************************************
+
+  # content-width-padding
+  - foundation > mixin
+  - コンテンツの横幅を設定(padding)
+
+**************************************************************************************************** */
+@use "../variable/layout";
+@use "../variable/breakpoint";
+
+
+@mixin content-width-padding() {
+  width: 100%;
+  padding: 0 layout.$content-side-gutter;
+  @media print, screen and (min-width: breakpoint.$breakpoint-min-md) {
+    padding: 0 layout.$content-side-gutter-sm-device;
+  }
+  @media print, screen and (min-width: breakpoint.$breakpoint-min-xl) {
+    padding: 0 layout.$content-side-gutter-mq-min-md;
+  }
+}

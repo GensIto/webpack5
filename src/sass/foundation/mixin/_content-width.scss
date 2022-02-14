@@ -1,0 +1,22 @@
+/* ****************************************************************************************************
+
+  # content-width
+  - foundation > mixin
+  - コンテンツの横幅を設定
+
+**************************************************************************************************** */
+@use "../variable/layout";
+@use "../variable/breakpoint";
+
+
+@mixin content-width() {
+  width: layout.$content-width-sm-device;
+  max-width: layout.$content-max-width;
+  margin: 0 auto;
+  @media print, screen and (min-width: breakpoint.$breakpoint-min-xs) {
+    width: layout.$content-width;
+  }
+  @media print, screen and (min-width: breakpoint.$breakpoint-min-md) {
+    width: layout.$content-width-mq-min-md;
+  }
+}

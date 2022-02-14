@@ -1,0 +1,23 @@
+/* ****************************************************************************************************
+
+  # font-family
+  - foundation > mixin
+
+**************************************************************************************************** */
+@use "../variable/typography";
+
+
+@mixin font-family-title-eng() {
+  font-family: typography.$font-family-title-eng;
+  font-weight: typography.$font-weight-normal-num;
+}
+
+@mixin font-family-title-jpn() {
+  font-family: typography.$font-family-title-jpn;
+  font-weight: typography.$font-weight-med;
+}
+
+@mixin font-family-cursive-eng() {
+  font-family: typography.$font-family-cursive-eng;
+  font-weight: typography.$font-weight-med;
+}

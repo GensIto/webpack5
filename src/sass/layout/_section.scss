@@ -1,0 +1,149 @@
+/* ****************************************************************************************************
+
+  # section
+  - layout
+  - 主にセクションの上下の余白を調整
+
+**************************************************************************************************** */
+@use "../foundation/tool/global";
+@use "sass:math";
+
+
+.l-section {
+  position: relative;
+  padding: math.div(global.$section-gutter, 2) 0;
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .l-section {
+    padding: math.div(global.$section-gutter-mq-min-md, 2) 0;
+  }
+}
+
+/* ======================================================================
+
+  ## gap
+
+====================================================================== */
+/* 上下余白大
+---------------------------------------------------------------------- */
+.l-section.l-section--gap_lg {
+  padding: global.$section-gutter 0;
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .l-section.l-section--gap_lg {
+    padding: global.$section-gutter-mq-min-md 0;
+  }
+}
+
+/* 上下余白小
+---------------------------------------------------------------------- */
+.l-section.l-section--gap_sm {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .l-section.l-section--gap_sm {
+    padding-top: math.div(global.$section-gutter-mq-min-md, 4);
+    padding-bottom: 3rem;
+  }
+}
+
+/* 上下余白なし
+---------------------------------------------------------------------- */
+.l-section.l-section--gap_0 {
+  padding: 0;
+}
+
+/* 上下余白中
+---------------------------------------------------------------------- */
+.l-section.l-section--gap_md {
+  padding: math.div(global.$section-gutter, 1.5) 0;
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .l-section.l-section--gap_md {
+    padding: math.div(global.$section-gutter-mq-min-md, 1.5) 0;
+  }
+}
+
+/* 上余白大
+---------------------------------------------------------------------- */
+.l-section.l-section--gap_top-lg {
+  padding-top: global.$section-gutter;
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .l-section.l-section--gap_top-lg {
+    padding-top: global.$section-gutter-mq-min-md;
+  }
+}
+
+/* 上余白中
+---------------------------------------------------------------------- */
+.l-section.l-section--gap_top-md {
+  padding-top: math.div(global.$section-gutter, 1.5);
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .l-section.l-section--gap_top-md {
+    padding-top: math.div(global.$section-gutter-mq-min-md, 1.5);
+  }
+}
+
+/* 上余白小
+---------------------------------------------------------------------- */
+.l-section.l-section--gap_top-sm {
+  padding-top: math.div(global.$section-gutter, 30);
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .l-section.l-section--gap_top-sm {
+    padding-top: math.div(global.$section-gutter-mq-min-md, 4);
+  }
+}
+
+/* 上余白なし
+---------------------------------------------------------------------- */
+.l-section.l-section--gap_top-0 {
+  padding-top: 0;
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .l-section.l-section--gap_top-0 {
+    padding-top: 0;
+  }
+}
+
+/* 下余白大
+---------------------------------------------------------------------- */
+.l-section.l-section--gap_bottom-lg {
+  padding-bottom: global.$section-gutter;
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .l-section.l-section--gap_bottom-lg {
+    padding-bottom: global.$section-gutter-mq-min-md;
+  }
+}
+
+/* 上余白中
+---------------------------------------------------------------------- */
+.l-section.l-section--gap_bottom-md {
+  padding-bottom: math.div(global.$section-gutter, 1.5);
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .l-section.l-section--gap_bottom-md {
+    padding-bottom: math.div(global.$section-gutter-mq-min-md, 1.5);
+  }
+}
+
+/* 下余白小
+---------------------------------------------------------------------- */
+.l-section.l-section--gap_bottom-sm {
+  padding-bottom: math.div(global.$section-gutter, 4);
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .l-section.l-section--gap_bottom-sm {
+    padding-bottom: math.div(global.$section-gutter-mq-min-md, 4);
+  }
+}
+
+/* 下余白なし
+---------------------------------------------------------------------- */
+.l-section.l-section--gap_bottom-0 {
+  padding-bottom: 0;
+}

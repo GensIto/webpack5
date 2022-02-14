@@ -1,0 +1,67 @@
+/* ****************************************************************************************************
+
+  # color
+  - foundation > variable > base
+
+**************************************************************************************************** */
+
+
+
+$color-white: #fff;
+$color-black: #000;
+
+$color-gray: #989898;
+$color-gray-light: #e8e4e0;
+$color-gray-xlight: #f4f4f4;
+$color-gray-med: #eae6e2;
+$color-gray-dark: dimgray !default;
+
+// $hoge: #eeeeee;
+
+
+/* 赤
+---------------------------------------------------------------------- */
+$color-red: #bc2e19;
+
+/* オレンジ
+---------------------------------------------------------------------- */
+$color-orange: #ee9200;
+$color-orange-light: #f1b251;
+$color-orange-xlight: #fff6ef;
+
+/* ベージュ
+---------------------------------------------------------------------- */
+$color-beige: #d7ccb7 !default;
+
+/* 茶色
+---------------------------------------------------------------------- */
+$color-brown: #2d2415;
+$color-brown-light: #70584b;
+
+/* 青
+---------------------------------------------------------------------- */
+$color-blue: #66aec3;
+$color-blue-light: #74bcce;
+$color-blue-xlight: #f1f6f7;
+$color-blue-dark: #74bacc;
+
+/* 緑
+---------------------------------------------------------------------- */
+$color-green: green !default;
+
+/* txt
+---------------------------------------------------------------------- */
+$color-txt: #462815;
+$color-txt-dark: #000 !default;
+$color-txt-light: lightgray !default;
+$color-link: red !default;
+
+/* border
+---------------------------------------------------------------------- */
+$color-border: $color-gray-med;
+$color-border-light: $color-gray-light;
+$color-border-dark: $color-txt;
+
+/* input系列
+---------------------------------------------------------------------- */
+$color-input-bg: $color-gray-xlight !default;

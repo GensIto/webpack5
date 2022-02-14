@@ -1,0 +1,37 @@
+/* ****************************************************************************************************
+
+  # global
+  - foundation > tools
+  - サイトの全体で使用するような汎用的なライブラリ(関数やMixins集)を
+    「foundation/tool/_global.scss」の中で「@forward」を使用して設定する
+
+**************************************************************************************************** */
+
+/* ## function
+---------------------------------------------------------------------- */
+@forward "foundation/function/get-vw";
+@forward "foundation/function/get-aspect-ratio";
+
+/* ## variable
+---------------------------------------------------------------------- */
+// base
+@forward "foundation/variable/breakpoint";
+@forward "foundation/variable/color";
+@forward "foundation/variable/animation";
+@forward "foundation/variable/easing";
+@forward "foundation/variable/typography";
+@forward "foundation/variable/layout";
+
+/* ## mixin
+---------------------------------------------------------------------- */
+@forward "foundation/mixin/appear-up";
+@forward "foundation/mixin/auto-kerning";
+@forward "foundation/mixin/background-img";
+@forward "foundation/mixin/content-width-padding";
+@forward "foundation/mixin/content-width";
+@forward "foundation/mixin/fitted-image";
+@forward "foundation/mixin/font-family";
+@forward "foundation/mixin/font-size";
+@forward "foundation/mixin/liquid-img";
+@forward "foundation/mixin/replace-txt";
+@forward "foundation/mixin/z-index";

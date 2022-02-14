@@ -1,0 +1,37 @@
+/* ****************************************************************************************************
+
+  # footer
+  - layout
+
+**************************************************************************************************** */
+@use "../foundation/tool/global";
+@use "sass:math";
+
+
+footer {
+  position: relative;
+  padding: math.div(global.$section-gutter, 1.5) 0 0;
+}
+
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+footer {
+    padding: math.div(global.$section-gutter-mq-min-md, 2) 0 0;
+  }
+}
+
+/* ======================================================================
+
+  ## container
+
+====================================================================== */
+.l-footer__container {
+  position: relative;
+  @include global.content-width-padding();
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .l-footer__container {
+    width: global.$content-width-mq-min-md;
+  }
+}
+
+

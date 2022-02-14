@@ -1,0 +1,25 @@
+/* ****************************************************************************************************
+
+  # notice-list
+  - foundation > variable > component
+  - 米印のリスト※
+
+**************************************************************************************************** */
+@use "../../variable/color";
+@use "../../variable/typography";
+
+
+$notice-list-font-size: typography.$font-size;
+$notice-list-font-size-mq-min-md: (typography.$font-size-mq-min-md - .1);
+$notice-list-bullet-gap: .2em ;
+$notice-list-offset: (1em + $notice-list-bullet-gap);
+$notice-list-color: color.$color-txt;
+$notice-list-line-spacing: 1.4;
+$notice-list-gutter: .2em;
+
+$notice-list-gap: 1.4rem;
+$notice-list-gap-mq-min-md: 1.4rem;
+$notice-list-gap-s: 1rem;
+$notice-list-gap-s-mq-min-md: 1rem;
+$notice-list-gap-l: 2rem;
+$notice-list-gap-l-mq-min-md: 2rem;

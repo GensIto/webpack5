@@ -1,0 +1,93 @@
+/* ****************************************************************************************************
+
+  # layout
+  - foundation > variable > base
+
+**************************************************************************************************** */
+@use "sass:math";
+
+
+/* ======================================================================
+
+  ## ヘッダーのheight
+
+====================================================================== */
+$header-height: 7.2rem;
+$header-height-fixed: 6.2rem;
+$header-height-mq-min-md: 11rem;
+$header-height-fixed-mq-min-md: 10rem;
+
+
+/* ======================================================================
+
+  ## sp追従ボタンのheight
+
+====================================================================== */
+$sp-fixed-nav-height: 5.8rem;
+
+
+/* ======================================================================
+
+  ## headerとか主な要素のz-index
+
+====================================================================== */
+$header-zindex: 248;
+$gnav-zindex: 249;
+$modal-layer-zindex: 247;
+$loading-zindex: 256;
+
+// 値が比較しづらいz-indexをMap型で一括管理する
+// 参考 https://book2.scss.jp/code/c5/02.html
+// mixinで使用 → /foundation/mixin/_z-index
+$stacking-order: (
+  loading: 256,
+  header: 255,
+  over-gnav: 254,
+  gnav: 253,
+  modal-layer: 252,
+  fixed-btn: 252,
+);
+
+
+/* ======================================================================
+
+  ## コンテンツ幅
+
+====================================================================== */
+/* ### width
+---------------------------------------------------------------------- */
+$content-width: 85.33333333vw;
+$content-width-lg: 92vw;
+$content-width-sm: 80vw;
+
+$content-width-sm-device: 88vw;
+$content-width-mq-min-md: 75vw;// 1080/1440
+$content-width-sm-mq-min-md: 66.66666667vw;// 960/1440
+
+/* ### side gutter
+---------------------------------------------------------------------- */
+$content-side-gutter: math.div((100vw - $content-width), 2);
+$content-lg-side-gutter: math.div((100vw - $content-width-lg), 2);
+$content-sm-side-gutter: math.div((100vw - $content-width-sm), 2);
+// pc
+$content-side-gutter-sm-device: math.div((100vw - $content-width-sm-device), 2);
+$content-side-gutter-mq-min-md: math.div((100vw - $content-width-mq-min-md), 2);
+$content-sm-side-gutter-mq-min-md: math.div((100vw - $content-width-sm-mq-min-md), 2);
+
+/* ### max-width
+---------------------------------------------------------------------- */
+// $content-width-mq-min-md: 95%;
+$content-max-width: 118.2rem;
+$content-max-width-lg: 116.8rem;
+$content-max-width-md: 96.6rem;
+$content-max-width-sm: 96rem;
+
+
+/* ======================================================================
+
+  ## セクション間のマージン
+
+====================================================================== */
+$section-gutter: 7.2rem;
+// $section-gutter-mq-min-md: 15.6rem;
+$section-gutter-mq-min-md: 11.1rem;

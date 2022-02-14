@@ -1,0 +1,20 @@
+/* ****************************************************************************************************
+
+  # body
+  - layout
+
+**************************************************************************************************** */
+@use "../foundation/tool/global";
+
+.l-body {
+  position: relative;
+  overflow: hidden;
+  padding: 0 0 global.$sp-fixed-nav-height;
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .l-body {
+    min-width: 1024px;
+    padding: 0 0 0;
+  }
+}
+

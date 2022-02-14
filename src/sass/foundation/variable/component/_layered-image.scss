@@ -1,0 +1,12 @@
+/* ****************************************************************************************************
+
+  # layered-image
+  - foundation > variable > component
+
+**************************************************************************************************** */
+@use "../../variable/color";
+
+
+$layered-image-width: 100% !default;
+$layered-image-color: color.$color-white !default;
+$layered-image-animation: 1s .2s cubic-bezier(0.48, 0.18, 0, 0.98);

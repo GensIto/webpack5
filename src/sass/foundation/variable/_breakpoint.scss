@@ -1,0 +1,39 @@
+/* ****************************************************************************************************
+
+  # breakpoint
+  - foundation > variable > base
+
+**************************************************************************************************** */
+/**
+ * 主なデバイスサイズ
+ * iphone 5/se: 320px
+ * galaxy s5: 360px
+ * iphone 6/7/8/X: 375px
+ * iphone 6/7/8 plus: 414px
+ * iPad: 768px
+ * iPad Pro: 1024px
+ */
+
+$breakpoint-min-xs: 360px;
+$breakpoint-min-sm: 414px;
+$breakpoint-min-md: 768px;
+$breakpoint-min-lg: 1024px;
+$breakpoint-min-xl: 1200px;
+$breakpoint-min-xxl: 1440px;
+$breakpoint-min-xxxl: 1920px;
+
+$breakpoint-max-md: 767px;
+$breakpoint-max-lg: 1023px;
+
+// モバイルファーストでスタイルを記述
+// 基本的に1024~からPCにする
+// ▼sp
+// .hoge {
+//   margin-bottom: 114px;
+// }
+// ▼pc
+// @media print, screen and (min-width: $breakpoint-min-lg) {
+//   .hoge {
+//     margin-bottom: 514px;
+//   }
+// }

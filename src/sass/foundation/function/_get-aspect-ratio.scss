@@ -1,0 +1,15 @@
+/* ****************************************************************************************************
+
+  # aspect-ratio
+  - foundation > function
+  - padding-topで画像アスペクト比を維持
+
+**************************************************************************************************** */
+// .hoge {
+//   padding-top: get-aspect-ratio(100, 56);
+// }
+
+@function aspect-ratio($width, $height) {
+  $ratio: math.div($height, $width);
+  @return $ratio * 100%;
+}

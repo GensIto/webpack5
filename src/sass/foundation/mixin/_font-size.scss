@@ -1,0 +1,114 @@
+/* ****************************************************************************************************
+
+  # font-size
+  - foundation > mixin
+  - 主要なフォントサイズを管理
+
+**************************************************************************************************** */
+@use "../variable/typography";
+@use "../variable/breakpoint";
+
+
+/* ======================================================================
+
+  ## 通常
+
+====================================================================== */
+@mixin font-size() {
+  font-size: typography.$font-size;
+  @media print, screen and (min-width: breakpoint.$breakpoint-min-md) {
+    font-size: typography.$font-size-mq-min-md;
+  }
+}
+
+
+/* ======================================================================
+
+  ## 小
+
+====================================================================== */
+@mixin font-size-s() {
+  font-size: typography.$font-size-sm;
+  @media print, screen and (min-width: breakpoint.$breakpoint-min-md) {
+    font-size: typography.$font-size-sm-mq-min-md;
+  }
+}
+
+
+/* ======================================================================
+
+  ## 極小
+
+====================================================================== */
+@mixin font-size-xs() {
+  font-size: typography.$font-size-xs;
+  @media print, screen and (min-width: breakpoint.$breakpoint-min-md) {
+    font-size: typography.$font-size-xs-mq-min-md;
+  }
+}
+
+
+/* ======================================================================
+
+  ## 中
+
+====================================================================== */
+
+@mixin font-size-m() {
+  font-size: typography.$font-size-md;
+  @media print, screen and (min-width: breakpoint.$breakpoint-min-md) {
+    font-size: typography.$font-size-md-mq-min-md;
+  }
+}
+
+
+/* ======================================================================
+
+  ## 大
+
+====================================================================== */
+@mixin font-size-l() {
+  font-size: typography.$font-size-l;
+  @media print, screen and (min-width: breakpoint.$breakpoint-min-md) {
+    font-size: typography.$font-size-lg-mq-min-md;
+  }
+}
+
+
+/* ======================================================================
+
+  ## 極大
+
+====================================================================== */
+@mixin font-size-xl() {
+  font-size: typography.$font-size-xl;
+  @media print, screen and (min-width: breakpoint.$breakpoint-min-md) {
+    font-size: typography.$font-size-xl-mq-min-md;
+  }
+}
+
+
+/* ======================================================================
+
+  ## heading
+
+====================================================================== */
+@mixin font-size-heading() {
+  font-size: typography.$font-size-heading;
+  @media print, screen and (min-width: breakpoint.$breakpoint-min-md) {
+    font-size: typography.$font-size-heading-mq-min-md;
+  }
+}
+
+
+/* ======================================================================
+
+  ## title
+
+====================================================================== */
+@mixin font-size-title() {
+  font-size: typography.$font-size-title;
+  @media print, screen and (min-width: breakpoint.$breakpoint-min-md) {
+    font-size: typography.$font-size-title-mq-min-md;
+  }
+}

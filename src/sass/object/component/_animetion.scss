@@ -1,0 +1,111 @@
+/* ****************************************************************************************************
+
+  #- アニメーション後付けのため分けてます
+  - c
+
+**************************************************************************************************** */
+
+@use "../../foundation/tool/global";
+
+//- **********************************************************************
+//- にじみ出てくる
+//- **********************************************************************
+.c-animation-blurred {
+  opacity: 0;
+}
+
+.c-animation-blurred.js-active {
+  animation: blurred 1s forwards;
+}
+
+@keyframes blurred {
+  0%{
+    opacity: 0;
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -ms-filter: blur(15px);
+    -o-filter: blur(15px);
+    filter: blur(15px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -ms-filter: blur(0px);
+    -o-filter: blur(0px);
+    filter: blur(0px);
+  }
+}
+
+//- **********************************************************************
+//- 下からふわっと
+//- **********************************************************************
+.c-animation-fadeup.js-scroll {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.c-animation-fadeup.js-active {
+  animation: fadeUp 1s forwards;
+}
+
+
+@keyframes fadeUp {
+  0%{
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+//- **********************************************************************
+//- 波紋
+//- **********************************************************************
+
+/* ボタンの波紋 */
+.c-ripples{
+  position: relative;
+  &::before,
+  &::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #d2c9ba;
+  border-radius: 50%;
+  box-sizing: border-box;
+  pointer-events: none;
+  animation: pulsate 2s linear infinite;
+  }
+  &::after {
+    animation-delay: 1s;
+  }
+}
+
+.c-ripples.c-ripples-white {
+  &::before,
+  &::after {
+    border: 1px solid #fff;
+  }
+}
+
+/* 波紋が広がっていくアニメーション */
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}

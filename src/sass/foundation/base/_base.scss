@@ -1,0 +1,203 @@
+/* ****************************************************************************************************
+
+  # base
+  - foundation
+
+**************************************************************************************************** */
+@use "../tool/global";
+
+
+* {
+  outline: none;
+}
+html {
+  // font-size: 62.5%;
+  // 計算式：　10(px) / 375(px) * 100 = 2.666
+  // 画面幅375pxの時に "font-size: 10px" 相当になる
+  font-size: calc(1000vw/375);
+  line-height: global.$line-height;
+  background-color: global.$color-white;
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media print, screen and (min-width: global.$breakpoint-min-xxxl) {
+  html {
+    font-size: calc(1000vw/1920);
+  }
+}
+
+@media print, screen and (max-width: global.$breakpoint-max-md) {
+  html.is-locked,
+  html.is-locked body {
+    overflow: hidden;
+    position: relative;
+  }
+}
+
+body {
+  color: global.$color-txt;
+  font-family: global.$font-family;
+  font-weight: global.$font-weight-normal;
+  font-size: 1.3em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
+  font-kerning: normal;
+  // font-feature-settings: "palt";
+  line-break: strict;
+}
+// _:-ms-input-placeholder, :root body {
+//   font-family: "メイリオ", Meiryo, sans-serif;
+// }
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  body {
+    font-size: 1.6em;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-weight: global.$font-weight-bold;
+  line-height: 1.4;
+  color: inherit;
+}
+
+ul, ol {
+  padding-left: 0;
+  list-style-type: none;
+}
+li {
+  > ul, > ol {
+    margin-bottom: 0;
+  }
+}
+
+dd {
+  margin-left: 0;
+}
+
+table {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: global.$color-link;
+  transition: global.$transition-duration;
+  &:hover {
+    opacity: global.$opacity;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+// IE
+[src$=".svg"],
+[data$=".svg"] {
+  width: 100%;
+}
+
+i,
+cite,
+em,
+address,
+dfn {
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6,
+ul, ol, dl,
+blockquote, p, address,
+hr,
+table,
+fieldset, figure,
+pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* ======================================================================
+
+  フォーム
+
+====================================================================== */
+input, button, textarea, select {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+textarea {
+  resize: none;
+  font-size: global.$font-size;
+}
+textarea::placeholder {
+  color: global.$color-gray;
+}
+textarea::-webkit-input-placeholder {
+  padding-top: .2rem;
+}
+textarea::-ms-input-placeholder {
+  color: global.$color-gray;
+}
+textarea:-ms-input-placeholder {
+  color: global.$color-gray;
+}
+
+input {
+  font-size: global.$font-size;
+}
+input::placeholder {
+  color: global.$color-gray;
+}
+input::-webkit-input-placeholder {
+  padding-top: .2rem;
+}
+input::-ms-input-placeholder {
+  color: global.$color-gray;
+}
+input:-ms-input-placeholder {
+  color: global.$color-gray;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+select {
+  font-size: global.$font-size;
+  text-indent: 0.01px;
+  text-overflow: '';
+  background: none transparent;
+  vertical-align: middle;
+  color: global.$color-txt;
+  cursor: pointer;
+  transition: global.$transition-duration;
+  &:hover {
+    opacity: global.$opacity;
+  }
+}
+select option {
+  background-color: #fff;
+  color: global.$color-txt;
+}
+select::-ms-expand {
+  display: none;
+}
+select:-moz-focusring {
+  color: global.$color-txt;
+  text-shadow: none;
+}
